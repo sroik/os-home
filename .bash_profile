@@ -37,7 +37,7 @@ function pull-request-auto() {
 # git aliases
 
 alias cpr='pull-request'
-alias cpra='pull-request-automerge'
+alias cpra='pull-request-auto'
 alias gamend='git add . && git commit --amend --no-edit'
 alias gs='git status '
 alias ga="git add -A"
