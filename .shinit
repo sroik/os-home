@@ -40,6 +40,7 @@ function pull-request-auto() {
 alias cpr='pull-request'
 alias cpra='pull-request-auto'
 alias gamend='git add . && git commit --amend --no-edit'
+alias gpt='git pull origin master && git trim'
 alias gs='git status '
 alias ga="git add -A"
 alias gb='git branch '
@@ -53,7 +54,6 @@ alias gx='gitx --all'
 alias ls='ls -G'
 alias atm='atom'
 alias cl='clear'
-
 
 ### LANG ###
 export LC_ALL=en_US.UTF-8

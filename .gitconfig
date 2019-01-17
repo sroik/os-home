@@ -1,0 +1,11 @@
+[user]
+	name = sroik
+	email = vasili.kazhanouski@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	ignorecase = false
+	trim = "!f() { git branch | grep -v \"\\*\" | xargs -n 1 git branch -D; }; f"
