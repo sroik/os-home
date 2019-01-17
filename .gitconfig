@@ -8,4 +8,5 @@
 	required = true
 [core]
 	ignorecase = false
+[alias]
 	trim = "!f() { git branch | grep -v \"\\*\" | xargs -n 1 git branch -D; }; f"
