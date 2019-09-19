@@ -54,6 +54,7 @@ alias gx='gitx --all'
 alias ls='ls -G'
 alias atm='atom'
 alias cl='clear'
+alias be='bundle exec'
 
 ### LANG ###
 export LC_ALL=en_US.UTF-8
