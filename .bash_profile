@@ -36,7 +36,3 @@ export PS1=$LIGHT_GRAY'$(
     # the state is clean, changes are commited
     else echo "'$CYAN'"$(__git_ps1 " (%s)")
     fi)'$BLUE" \w"$GREEN": "
-
-
-### elixir history ###
-export ERL_AFLAGS="-kernel shell_history enabled"

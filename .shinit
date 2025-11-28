@@ -1,44 +1,6 @@
 
-### git ###
-
-# current branch
-function head-branch() {
-    git rev-parse --abbrev-ref HEAD
-}
-
-# last commit message of given branch
-function branch-commit-message() {
-    git log --pretty=format:'%s' --date=relative master.."$1" | tail -1
-}
-
-# last commit message of current branch
-function head-commit-message() {
-    head-branch | branch-commit-message
-}
-
-# amends arg1 to the last commit message
-function amend() { 
-    git commit --amend -m "$(head-commit-message) $1"
-}
-
-# creates pull request
-function pull-request() {
-    echo "Creating pull request with message: $(head-commit-message)"
-    git push -u origin "$(head-branch)"
-    hub pull-request -m "$(head-commit-message)"
-}
-
-# amends #automerge tag and creates pull request
-function pull-request-auto() {
-    amend "(#am)"
-    pull-request
-}
-
-
 ### aliases ###
 
-alias cpr='pull-request'
-alias cpra='pull-request-auto'
 alias gamend='git add . && git commit --amend --no-edit'
 alias gpt='git pull origin main && git trim'
 alias gs='git status '
@@ -46,13 +8,7 @@ alias ga="git add -A"
 alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
-alias got='git '
-alias get='git '
-alias gti='git '
-alias gk='gitk --all&'
-alias gx='gitx --all'
 alias ls='ls -G'
-alias atm='atom'
 alias cl='clear'
 alias be='bundle exec'
 
@@ -60,10 +16,8 @@ alias be='bundle exec'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-
 ### ssh-add ###
 ssh-add -A &> /dev/null
-
 
 ### package managers ###
 
